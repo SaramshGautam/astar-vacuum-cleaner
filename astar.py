@@ -114,7 +114,7 @@ def astar(initial_state, heuristic):
             f_values_on_path.append(f_value)
             states_on_path.append(state)
             actions_on_path.append(path)
-            print("Solution Path:", path)
+            print("Sequence of Actions on the Optimal Path:", path)
             print("Node states, f(n) values, and actions leading to each node in the optimal path (including initial and final states):")
             for i, (fn_value, node_state, actions_taken) in enumerate(zip(f_values_on_path, states_on_path, actions_on_path)):
                 print(f"Node {i + 1}: State = {node_state}, f(n) = {fn_value}, Actions = {actions_taken}")
