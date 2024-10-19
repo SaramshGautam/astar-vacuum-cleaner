@@ -104,8 +104,8 @@ def astar(initial_state, heuristic):
     explored = set()
     num_expanded = 0
     f_values_on_path = []  # Track f(n) values for the optimal path
-    states_on_path = []  # Track states on the optimal path
-    actions_on_path = [] # Track actions leading to each node in the optimal path
+    states_on_path = [initial_state]  # Track states on the optimal path (include initial state)
+    actions_on_path = [[]] # Track actions leading to each node in the optimal path
     
     while frontier:
         f, _, state, path, g, f_value = heapq.heappop(frontier)  # g is the current cost (path cost)
