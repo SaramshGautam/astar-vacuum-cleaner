@@ -69,7 +69,7 @@ The A\* algorithm explores the grid by expanding the node with the lowest cost `
 2. Run the script using:
 
    ```bash
-   python vacuum_agent.py
+   python astar.py
    ```
 
 3. The program will run the A\* algorithm with two heuristic functions `h1` and `h2` and display:
