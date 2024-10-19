@@ -3,12 +3,12 @@ import itertools
 
 # Define the initial state
 initial_state = {
-    "grid": (
-        (0, 0, 0, 0, 0),  # 1 means dirty at position (1,5)
-        (0, 0, 0, 0, 0),  # Dirty at position (2,5)
-        (0, 0, 0, 0, 0),  # Dirty at position (3,5)
-        (0, 0, 0, 0, 0),  # Dirty at position (4,5)
-        (1, 1, 1, 1, 1)   # Dirty at position (5,5)
+    "grid": (             # 1 means dirty at position (1,5)
+        (0, 0, 0, 0, 0),  
+        (0, 0, 0, 0, 0),  
+        (0, 0, 0, 0, 0),  
+        (0, 0, 0, 0, 0),  
+        (1, 1, 1, 1, 1)   # Dirty at position (x,5), all squares in row 5
     ),
     "position": (1, 1)  # Initial position at bottom left (1,1)
 }

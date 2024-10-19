@@ -83,7 +83,7 @@ The A\* algorithm explores the grid by expanding the node with the lowest cost `
 
 ```bash
 Running A* with h1 (Admissible Heuristic):
-Solution Path: ['Right', 'Suck', 'Right', 'Suck', 'Right', 'Suck']
+Solution Path: ['Up', 'Up', 'Up','Right', 'Suck', 'Right', 'Suck', 'Right', 'Suck']
 Node 1: State = {...}, f(n) = 49, Actions = ['Right']
 Node 2: State = {...}, f(n) = 51, Actions = ['Right', 'Suck']
 ...
