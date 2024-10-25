@@ -1,0 +1,49 @@
+A* Algorithm for a Vacuum Cleaner Agent on a 5x5 Grid
+Overview
+This project implements an A* search algorithm for a vacuum cleaner agent. The agent's objective is to clean a 5x5 grid where the top row of squares is dirty, while the remaining squares are clean. The agent starts at the bottom-left corner and must find the most optimal path to clean all the dirty squares. The algorithm uses two heuristic functions, h1 and h2, to guide the search process and determine the optimal sequence of actions.
+
+Components
+1. Grid Representation
+The grid is a 5x5 matrix where:
+    1 represents a dirty square, and
+    0 represents a clean square.
+At the beginning of the program, the top row (fifth row) of the grid contains dirty squares, and the agent starts at position (1,1) at the bottom-left corner.
+
+2. Agent's Possible Actions
+The vacuum cleaner agent can move in four directions and can clean a dirty square using the Suck action. The possible actions include:
+    Up: Move the agent up one row.
+    Down: Move the agent down one row.
+    Left: Move the agent left by one column.
+    Right: Move the agent right by one column.
+    Suck: Clean the square where the agent is located.
+
+3. Successor Function
+The successor function computes the next state based on the current state and the action taken. It updates both the grid and the agent's position. For example, when the agent performs a "Suck" action, it cleans the square where it is currently located.
+
+4. Cost Function
+The cost function calculates the cost associated with moving to a new state. It depends on the number of dirty squares left on the grid. More dirty squares result in a higher cost.
+
+5. Goal Test
+The goal test checks if the entire grid is clean, i.e., there are no 1s left in any row of the grid.
+
+Heuristic Functions
+1. h1 (Admissible Heuristic)
+The first heuristic, h1, calculates the estimated cost to clean the remaining dirty squares based on:
+    The Manhattan distance between the agent and the nearest dirty square.
+    The number of dirty squares remaining on the grid.
+    This heuristic is admissible, meaning it never overestimates the actual cost, making it safe to use in the A* algorithm.
+
+2. h2 (Dominating Heuristic)
+The second heuristic, h2, is more informed than h1. It extends h1 by adding a penalty for leaving dirty squares on the grid. This results in a more precise estimate of the cost, leading to a faster and more efficient search.
+
+A Algorithm*
+The A* algorithm explores the grid by expanding the node with the lowest combined cost f(n) = g(n) + h(n). Here:
+    g(n) represents the cost to reach the current state, and
+    h(n) is the heuristic estimate of the remaining cost to reach the goal.
+
+The algorithm tracks:
+    The optimal path: The sequence of actions taken by the agent to clean all dirty squares.
+    f(n) values: The cost of each node in the path.
+    Actions: The actions performed to reach each state.
+
+The algorithm terminates when the agent cleans all squares on the grid (i.e., passes the goal test).

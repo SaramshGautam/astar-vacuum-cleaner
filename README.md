@@ -61,6 +61,14 @@ The A\* algorithm explores the grid by expanding the node with the lowest cost `
 - **f(n) values**: The cost for each node in the path.
 - **Actions**: The actions performed to reach each state.
 
+### **7. Node Tracking: A node in the search tree is represented as a tuple with:**
+
+-f(n): total estimated cost (g + h).
+-g(n): the actual cost to reach this node.
+-h(n): the heuristic estimate of the remaining cost to the goal.
+-State: the state of the grid and agent's position.
+-Path: the sequence of actions taken to reach this node.
+
 ---
 
 ## **How to Run the Program**
