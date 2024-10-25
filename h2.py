@@ -104,8 +104,8 @@ def astar(initial_state, heuristic):
 
         # Goal test
         if goal_test(state):
-            print(f"Optimal Path: {path}")
-            print(f"Total nodes expanded: {num_expanded}")
+            print(f"========================== \nOptimal Path: {path}")
+            print(f"========================== \nTotal nodes expanded: {num_expanded}\n========================== \n")
             return path
 
         state_tuple = state_to_tuple(state)  # Create a hashable version of the state

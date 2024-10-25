@@ -50,8 +50,8 @@ The cost function assigns a cost to each move made by the agent. The cost is bas
 
 Two heuristic functions are used to estimate the cost of cleaning the grid:
 
-- **h1 (Admissible Heuristic)**: It estimates the remaining cost based on the distance to the nearest dirty square and the number of dirty squares left. It never overestimates the cost, making it admissible.
-- **h2 (Dominating Heuristic)**: This heuristic extends `h1` by adding a penalty for leaving squares dirty, making it more informed and dominating over `h1`.
+- **h1 (Admissible Heuristic)**: It estimates the remaining cost based on the distance to the nearest dirty square and the number of dirty squares left. It never overestimates the cost, making it admissible. This heuristic is implemented in h1.py.
+- **h2 (Dominating Heuristic)**: This heuristic extends `h1` by adding a penalty for leaving squares dirty, making it more informed and dominating over `h1`. This heuristic is implemented in h2.py.
 
 ### **6. A\* Algorithm**
 
@@ -74,16 +74,22 @@ The A\* algorithm explores the grid by expanding the node with the lowest cost `
 ## **How to Run the Program**
 
 1. Ensure you have Python installed.
-2. Run the script using:
+2. To run the program with the `h1` heuristic, use the following command:
 
    ```bash
-   python astar.py
+   python h1.py
    ```
 
-3. The program will run the A\* algorithm with two heuristic functions `h1` and `h2` and display:
+3. To run the program with the `h2` heuristic, use the following command:
+
+   ```bash
+   python h2.py
+   ```
+
+4. The program will run the A\* algorithm with two heuristic functions `h1` and `h2` separately and display:
    - The optimal sequence of actions.
    - The states and actions leading to each node in the optimal path.
-   - The `f(n)` values for each node.
+   - The `f(n)`, `g(n)`, `h(n)` values for each node.
 
 ---
 
